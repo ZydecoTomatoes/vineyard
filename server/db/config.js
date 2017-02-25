@@ -105,7 +105,7 @@ db.knex.schema.hasTable('addresses')
 			message.integer('message_author_id').references('users.id').notNullable();
 		})
 		.then(() => {
-		  console.log('Tables created successfully!'); 
+		  console.log('Tables created successfully!');
 		})
 		.catch((err) => {
 			console.log('Error with table implementation: ', err);
