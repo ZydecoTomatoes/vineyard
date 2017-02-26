@@ -1,4 +1,4 @@
-import vineyardsController from '../db/controllers/vineyards';
+import { newVineyard, getVineyard } from '../db/controllers/vineyards';
 
 export function createVineyard(req, res, next) {
   const params = {
@@ -6,7 +6,7 @@ export function createVineyard(req, res, next) {
     phoneNumber: req.body.phoneNumber,
     appellation: req.body.appellation
   };
-  return vineyardsController.newVineyard(params)
+  return newVineyard(params)
   .then((vineyard) => {
     if (vineyard) {
       res.json(vineyard);

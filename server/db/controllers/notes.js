@@ -1,6 +1,6 @@
 import Notes from '../models/notes';
 
-const newNote = (params) => {
+export const newNote = (params) => {
   console.log('inside newNote db controller');
   return new Notes({
     title: params.title,
@@ -13,7 +13,7 @@ const newNote = (params) => {
   }).save();
 };
 
-const getAllNotes = () => {
+export const getAllNotes = () => {
   return Notes.forge().orderBy('date_time','DESC').fetchAll();
 };
 
@@ -22,11 +22,3 @@ const getAllNotes = () => {
 // const updateNote = (req, res, next) => {};
 // const deleteNote = (req, res, next) => {};
 /*==================need to refactor to BS/KNX=======================*/
-
-export default {
-  newNote,
-  // getNote,
-  getAllNotes
-  // updateNote,
-  // deleteNote
-}

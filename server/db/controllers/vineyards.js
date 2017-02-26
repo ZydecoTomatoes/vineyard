@@ -1,6 +1,6 @@
 import Vineyards from '../models/vineyards';
 
-const newVineyard = (params) => {
+export const newVineyard = (params) => {
   return new Vineyards ({
     name: params.name,
     phoneNumber: params.phoneNumber,
@@ -8,7 +8,7 @@ const newVineyard = (params) => {
   });
 };
 
-const getVineyard = (params) => {
+export const getVineyard = (params) => {
   return new Vineyards({name: params.name}).fetch();
 };
 
@@ -47,11 +47,3 @@ const getVineyard = (params) => {
 // };
 
 /*==================need to refactor to BS/KNX=======================*/
-
-export default {
-  newVineyard,
-  getVineyard
-  // getVineyards,
-  // updateVineyard,
-  // deleteVineyard
-};

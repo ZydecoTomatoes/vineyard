@@ -1,12 +1,8 @@
 import notesController from '../db/controllers/notes';
 
 export function createNote(req, res, next) {
-<<<<<<< HEAD
   console.log('inside create note server controller');
   console.log('user posting note:', req.body.note_author_id);
-=======
-  console.log('inside createNote server controller');
->>>>>>> Trying to get model note tests to fail.
   const params = {
     title: req.body.title,
     text: req.body.text,
